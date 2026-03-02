@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Instalação
+
+```bash
+npx create-next-app@latest my-site
+```
+
 First, run the development server:
 
 ```bash
@@ -19,3 +25,5 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 - O que é Single Page Application (SPA)?
 - Como instalar o Next.js?
 - Qual a diferença entre os pacotes react, react-dom e next?
+- O que são Componentes?
+- O que é JSX?
