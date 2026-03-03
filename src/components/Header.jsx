@@ -1,7 +1,9 @@
+import styles2 from "./Header.module.css"  // Importando o CSS Module para usar as classes definidas nele 
+
 export default function Header(){
     return (
         <header style={styles.container}>
-            <h1>Logo</h1>
+            <h1 className={styles2.logo}>Logo</h1>
             <nav>
                 <ul style={styles.nav}>
                     <li>Home</li>
@@ -14,8 +16,7 @@ export default function Header(){
     )
 }
 
-
-const styles = {
+const styles = { // CSS-in-JS
     container: {
         backgroundColor: "#000",
         color: "#FFF",
