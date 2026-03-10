@@ -27,3 +27,6 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 - Qual a diferença entre os pacotes react, react-dom e next?
 - O que são Componentes?
 - O que é JSX?
+- Como estilizar um componente?
+- Como adicionar Imagens com Next.js?
+- Para que serve a biblioteca React Icons?
