@@ -10,7 +10,6 @@ export default function CardUser({ avatar, name, email }){
 
     // const { avatar, name, email } = props
 
-
     return (
         <div style={styles.container}>
             <img 
