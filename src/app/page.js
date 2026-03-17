@@ -1,4 +1,5 @@
 import CardUser from "@/components/CardUser";
+import Contador from "@/components/Contador";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -13,6 +14,12 @@ export default function Home() {
         <main>
           <h1>Home</h1>
           <p>Conteúdo da página Home</p>
+
+          <Contador />
+          <Contador />
+          <br /> 
+ <br />  <br />   
+
           <Image
             src="img/bot.svg"
             alt="Bot"
