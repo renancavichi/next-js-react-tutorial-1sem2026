@@ -15,6 +15,7 @@ export default function Header() {
           <li style={styles.item}>
             <IconPhone /> Contato
           </li>
+          <li style={styles.item}><button type="button">Cadastre-se</button></li>
         </ul>
       </nav>
     </header>

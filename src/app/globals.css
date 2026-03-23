@@ -35,6 +35,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
