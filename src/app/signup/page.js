@@ -12,10 +12,22 @@ export default function SignUp() {
   const [pass, setPass] = useState("");
   const [avatar, setAvatar] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(name, email, pass, avatar);
-    //TODO: Enviar os dados para o backend criar a conta do usuário
+    const response = await fetch('http://localhost:3333/user',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({name, email, pass, avatar})
+    })
+    if(response.ok){
+      const data = await response.json();
+      console.log(data);
+    } else{
+      const data = await response?.json();
+      console.error('Erro ao criar conta', data);
+    }
   }
 
   return (
