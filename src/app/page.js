@@ -41,6 +41,7 @@ export default function Home() {
               users.map(user => 
                 <CardUser 
                   key={user.id}
+                  id={user.id}
                   avatar={user.avatar}
                   name={user.name}
                   email={user.email}
