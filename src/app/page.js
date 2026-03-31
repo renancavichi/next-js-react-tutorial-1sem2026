@@ -45,6 +45,8 @@ export default function Home() {
                   avatar={user.avatar}
                   name={user.name}
                   email={user.email}
+                  users={users}
+                  setUsers={setUsers}
                 />
               )
             }

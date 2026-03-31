@@ -1,15 +1,7 @@
 import { FaTrashAlt, FaUserEdit  } from "react-icons/fa";
 import { useState } from "react";
 
-export default function CardUser({ id, avatar, name, email }){
-
-    // const props = {
-    //      avatar: "https://github.com/renancavichi.png",
-    //      name: "Renan Cavichi",
-    //      email: "renancavichi@gmail.com"
-    // }
-
-    // const { avatar, name, email } = props
+export default function CardUser({ id, avatar, name, email, users, setUsers }) {
 
       const [modal, setModal] = useState(false);
 
@@ -26,6 +18,8 @@ export default function CardUser({ id, avatar, name, email }){
          console.log(data);
         if(response.ok){
             alert("Usuário deletado com sucesso!");
+            const usersUpdated = users.filter(user => user.id !== id);
+            setUsers(usersUpdated);
         } else{
             alert("Erro ao deletar usuário: ")
         }
@@ -49,6 +43,18 @@ export default function CardUser({ id, avatar, name, email }){
         console.log(data);
         if(response.ok){
             alert("Usuário atualizado com sucesso!");
+            const usersUpdated = users.map(user => {
+                if(user.id === id){
+                    return {
+                        ...user,
+                        name: nameUser,
+                        email: emailUser,
+                        avatar: avatarUser
+                    }
+                }
+                return user;
+            })
+            setUsers(usersUpdated);
             setModal(false);
         } else{
             alert("Erro ao atualizar usuário: ")
@@ -72,7 +78,6 @@ export default function CardUser({ id, avatar, name, email }){
                 <p>{email}</p>
             </div> 
         </div>
-
         {modal && (
             <div style={styles.modal}>
                 <div style={styles.content}>
