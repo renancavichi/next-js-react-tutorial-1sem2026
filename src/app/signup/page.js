@@ -4,6 +4,7 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
+import { useSearchParams } from "next/navigation";
 
 export default function SignUp() {
 
@@ -11,6 +12,8 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [avatar, setAvatar] = useState("");
+
+  const searchParams = useSearchParams()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -38,6 +41,8 @@ export default function SignUp() {
         <main>
           <h1>Cadastre-se</h1>
           <p>Preencha o formulário abaixo para criar sua conta:</p>
+          <p>Usuário ID: {searchParams.get('id')}</p>
+          <p>Usuário Nome: {searchParams.get('name')}</p>
           <form style={styles.form} onSubmit={handleSubmit}>
             <label htmlFor="name">Nome:</label>
             <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} style={styles.textInput} />
