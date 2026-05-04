@@ -1,14 +1,17 @@
-import { FaTrashAlt, FaUserEdit  } from "react-icons/fa";
-import { useState } from "react";
+import { FaTrashAlt, FaUserEdit  } from "react-icons/fa"
+import { useState } from "react"
+import { useUserStore } from "@/stores/userStore"
 
-export default function CardUser({ id, avatar, name, email, users, setUsers }) {
+export default function CardUser({ id, avatar, name, email }) {
 
-      const [modal, setModal] = useState(false);
+      const [modal, setModal] = useState(false)
 
-      const [nameUser, setNameUser] = useState(name);
-      const [emailUser, setEmailUser] = useState(email);
-      const [passUser, setPassUser] = useState("");
-      const [avatarUser, setAvatarUser] = useState(avatar);
+      const [nameUser, setNameUser] = useState(name)
+      const [emailUser, setEmailUser] = useState(email)
+      const [passUser, setPassUser] = useState("")
+      const [avatarUser, setAvatarUser] = useState(avatar)
+
+    const { users, updateUsers } = useUserStore()
 
     const handleDelete = async () => {
         const response = await fetch(`http://localhost:3333/user/${id}`, {
@@ -19,7 +22,7 @@ export default function CardUser({ id, avatar, name, email, users, setUsers }) {
         if(response.ok){
             alert("Usuário deletado com sucesso!");
             const usersUpdated = users.filter(user => user.id !== id);
-            setUsers(usersUpdated);
+            updateUsers(usersUpdated);
         } else{
             alert("Erro ao deletar usuário: ")
         }

@@ -4,10 +4,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { useEffect, useState } from "react";
+import { useUserStore } from "@/stores/userStore";
+
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
-  const [users, setUsers] = useState([]);
+  //const [users, setUsers] = useState([]);
+  const { users, updateUsers } = useUserStore();
 
   useEffect(() => {
 
@@ -16,7 +19,7 @@ export default function Home() {
       if(response.ok){
         const data = await response.json();
         console.log(data);
-        setUsers(data.users);
+        updateUsers(data.users);
       } else{
         const data = await response?.json();
         console.error('Erro ao buscar usuários', data);
@@ -24,7 +27,7 @@ export default function Home() {
     }
     getUsers()
     setIsLoading(false)
-  }, [])
+  }, [updateUsers])
 
   return (
     <div>
@@ -45,8 +48,6 @@ export default function Home() {
                   avatar={user.avatar}
                   name={user.name}
                   email={user.email}
-                  users={users}
-                  setUsers={setUsers}
                 />
               )
             }

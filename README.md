@@ -69,17 +69,31 @@ Apresentação (peso 20)
 # Temas:
 
 - React Query (Tanstack) - Vitor
-- Chart.js - Gráficos
-- Redux e/ou 
-- Axios 
-- Material UI (Componentes de UI) - Letícia Pacheco e Felipe Cursino
+- Chart.js - Gráficos - Rafael Tomaz
+- Redux
+- Axios - Tiago Venancio
+- Material UI (Componentes de UI) - Letícia Pacheco, Felipe Cursino e Mauricio
 - Shadcn (Componentes de UI) - João Gabriel e Lucas
-- Mantine UI - Arthur e Vinícius
+- Mantine (Componentes de UI) - Arthur e Vinícius
+- Base UI (Componentes de UI) Emerson Soares
+- React Uploady - Kevin, Ana, Thiago Carvalho
 - Formik (Formulários)
-- React Hook Form (Formulários)
+- React Hook Form (Formulários) - Eduarda
 - Framer Motion - Vitor Ramos
 - React Game Engine - Kauan Leonel
 - Mapas (Google Maps React / React Leaflet)
+- Teste de Componentes
+- React Test Library - Nicoli / Giselle / Raissa / David 
 
 (Aplicações de IA para React)
 - Skills para React
+
+Data Apresentações:
+
+- 18/05
+- 25/05
+- 01/06
+- 08/06
+- 15/06
+- 22/06
+
