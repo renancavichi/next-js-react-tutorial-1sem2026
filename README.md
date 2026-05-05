@@ -83,7 +83,9 @@ Apresentação (peso 20)
 - React Game Engine - Kauan Leonel
 - Mapas (Google Maps React / React Leaflet)
 - Teste de Componentes
-- React Test Library - Nicoli / Giselle / Raissa / David 
+- React Test Library - Nicoli / Giselle / Raissa / David
+- React Slick (Sliders) - Matheus
+ 
 
 (Aplicações de IA para React)
 - Skills para React

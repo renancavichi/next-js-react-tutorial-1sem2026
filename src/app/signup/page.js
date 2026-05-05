@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import { useSearchParams } from "next/navigation";
+import { useUserStore } from "@/stores/userStore";
 
 export default function SignUp() {
 
@@ -12,6 +13,7 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [avatar, setAvatar] = useState("");
+  const { addUser } = useUserStore()
 
   const searchParams = useSearchParams()
 
@@ -27,6 +29,7 @@ export default function SignUp() {
     if(response.ok){
       const data = await response.json();
       console.log(data);
+      addUser(data.user);
     } else{
       const data = await response?.json();
       console.error('Erro ao criar conta', data);
