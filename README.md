@@ -64,6 +64,15 @@ Apresentação (peso 20)
 - Tema deve ser validado com professor.
 - Agendar data de aprensentação.
 
+Tópicos Sugeridos
+
+- O que é? Para que serve? Qual problema resolve?
+- Como instala?
+- Como usa, configurações, variações?
+- Exemplos de Código
+- Demonstração
+
+
 -------
 
 # Temas:
@@ -77,18 +86,18 @@ Apresentação (peso 20)
 - Mantine (Componentes de UI) - Arthur e Vinícius
 - Base UI (Componentes de UI) Emerson Soares
 - React Uploady - Kevin, Ana, Thiago Carvalho
-- Formik (Formulários)
+- Formik (Formulários) - Angelo
 - React Hook Form (Formulários) - Eduarda
 - Framer Motion - Vitor Ramos
 - React Game Engine - Kauan Leonel
 - Mapas (Google Maps React / React Leaflet)
 - Teste de Componentes
-- React Test Library - Nicoli / Giselle / Raissa / David
+- StoryBook - Nicoli / Giselle / Raissa / David
 - React Slick (Sliders) - Matheus
- 
-
+- ViewTransition - João Alves
+- useRef e use - Tulio
 (Aplicações de IA para React)
-- Skills para React
+- Skills para React - Robert e Hyan
 
 Data Apresentações:
 
@@ -98,4 +107,3 @@ Data Apresentações:
 - 08/06
 - 15/06
 - 22/06
-
