@@ -1,21 +1,33 @@
-import CardUser from "@/components/CardUserFlat";
+'use client';
+import CardUser from "@/components/CardUser";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
+import { useEffect, useState } from "react";
+import { useUserStore } from "@/stores/userStore";
 
-export default async function Home() {
+export default function Home() {
 
-  let users = [];
+  const [isLoading, setIsLoading] = useState(true);
+  //const [users, setUsers] = useState([]);
+  const { users, updateUsers } = useUserStore();
 
-  const response = await fetch('http://localhost:3333/user')
-  if(response.ok){
-    const data = await response.json();
-    console.log(data);
-    users = data.users;
-  } else{
-    const data = await response?.json();
-    console.error('Erro ao buscar usuários', data);
-  }
+  useEffect(() => {
+
+    const getUsers = async () => {
+      const response = await fetch('http://localhost:3333/user')
+      if(response.ok){
+        const data = await response.json();
+        console.log(data);
+        updateUsers(data.users);
+      } else{
+        const data = await response?.json();
+        console.error('Erro ao buscar usuários', data);
+      }
+    }
+    getUsers()
+    setIsLoading(false)
+  }, [updateUsers])
 
   return (
     <div>
@@ -28,7 +40,8 @@ export default async function Home() {
           <div style={styles.container}>
         </div>
           <div style={styles.users}>
-            { users.map(user => 
+            {isLoading ? <p>Carregando...</p> : 
+              users.map(user => 
                 <CardUser 
                   key={user.id}
                   id={user.id}

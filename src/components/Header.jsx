@@ -1,3 +1,4 @@
+'use client';
 import Logo from "./Logo";
 import { FaPhoneAlt as IconPhone, FaHome as IconHome } from "react-icons/fa";
 import Link from 'next/link'

@@ -1,3 +1,4 @@
+'use client';
 import Logo from "./Logo";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
