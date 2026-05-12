@@ -44,7 +44,12 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 - Virtual DOM
   - Como funciona o virtual DOM do React? 
 - Estados Globais (Zustand)
+  - Qual a diferença de criar estados com useState e Zustand?
+  - Quantos stores podemos criar com Zustand?
+  - É correto afirmar que em um store posso criar estados e diferentes tipos de funções que alteram esses estados?  
 - Server Components
+  - Qual a diferença entre Client Components e Server Components?
+  - Posso chamar um Client Component dentro de um Server Component? E o inverso?
 - CRUD
 
 -------
@@ -98,12 +103,13 @@ Tópicos Sugeridos
 - useRef e use - Tulio
 (Aplicações de IA para React)
 - Skills para React - Robert e Hyan
+- React Typescript - Luan e Murillo
 
 Data Apresentações:
 
-- 18/05
-- 25/05
-- 01/06
-- 08/06
-- 15/06
-- 22/06
+- 18/05 - Shadcn - João Gabriel e Lucas | Framer Motion - Vitor Ramos
+- 25/05 - useRef e use - Tulio | ViewTransition - João Alves | React Game Engine - Kauan Leonel | Formik (Formulários) - Angelo
+- 01/06 - Base UI (Componentes de UI) Emerson Soares | Chart.js - Gráficos - Rafael Tomaz | React Typescript - Luan e Murillo
+- 08/06 - Skills para React - Robert e Hyan | Material UI (Componentes de UI) - Letícia Pacheco, Felipe Cursino e Mauricio | React Slick (Sliders) - Matheus (Fechada)
+- 15/06 - StoryBook - Nicoli / Giselle / Raissa / David | React Uploady - Kevin, Ana, Thiago Carvalho (Fechada)
+- 22/06 - Mantine (Componentes de UI) - Arthur e Vinícius
