@@ -18,7 +18,7 @@ export default function CardUser({ id, avatar, name, email }) {
             method: "DELETE"
         })
         const data = await response?.json() || {};
-         console.log(data);
+        console.log(data);
         if(response.ok){
             alert("Usuário deletado com sucesso!");
             const usersUpdated = users.filter(user => user.id !== id);
@@ -57,7 +57,7 @@ export default function CardUser({ id, avatar, name, email }) {
                 }
                 return user;
             })
-            setUsers(usersUpdated);
+            updateUsers(usersUpdated);
             setModal(false);
         } else{
             alert("Erro ao atualizar usuário: ")

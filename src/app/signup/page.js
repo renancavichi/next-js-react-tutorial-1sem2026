@@ -16,8 +16,8 @@ export default function SignUp() {
 
   const searchParams = useSearchParams()
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     const response = await fetch('http://localhost:3333/user',{
       method: 'POST',
       headers: {
@@ -28,6 +28,7 @@ export default function SignUp() {
     if(response.ok){
       const data = await response.json();
       console.log(data);
+      alert("Conta criada com sucesso!");
       addUser(data.user);
     } else{
       const data = await response?.json();
@@ -47,13 +48,13 @@ export default function SignUp() {
           <p>Usuário Nome: {searchParams.get('name')}</p>
           <form style={styles.form} onSubmit={handleSubmit}>
             <label htmlFor="name">Nome:</label>
-            <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} style={styles.textInput} />
+            <input type="text" id="name" name="name" value={name} onChange={(event) => setName(event.target.value)} style={styles.textInput} />
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} style={styles.textInput} />
+            <input type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} style={styles.textInput} />
             <label htmlFor="password">Senha:</label>
-            <input type="password" id="password" name="pass" value={pass} onChange={(e) => setPass(e.target.value)} style={styles.textInput} />
+            <input type="password" id="password" name="pass" value={pass} onChange={(event) => setPass(event.target.value)} style={styles.textInput} />
             <label htmlFor="avatar">Avatar:</label>
-            <input type="text" id="avatar" name="avatar" value={avatar} onChange={(e) => setAvatar(e.target.value)} style={styles.textInput} />
+            <input type="text" id="avatar" name="avatar" value={avatar} onChange={(event) => setAvatar(event.target.value)} style={styles.textInput} />
             <button type="submit">Cadastrar</button>
           </form>
         </main>
