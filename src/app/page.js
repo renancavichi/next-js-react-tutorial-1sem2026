@@ -60,6 +60,9 @@ export default function Home() {
 }
 
 const styles = {
+  container: {
+    marginTop: 20
+  },
   section: {
     display: "flex",
     gap: 20,
