@@ -107,8 +107,8 @@ Tópicos Sugeridos
 Data Apresentações:
 
 - 18/05 - Shadcn - João Gabriel e Lucas | Framer Motion - Vitor Ramos
-- 25/05 - useRef e use - Tulio | ViewTransition - João Alves | React Game Engine - Kauan Leonel | Formik (Formulários) - Angelo | React Query (Tanstack) - Vitor
+- 25/05 - useRef e use - Tulio | ViewTransition - João Alves | React Game Engine - Kauan Leonel |  React Query (Tanstack) - Vitor
 - 01/06 - Base UI (Componentes de UI) Emerson Soares | Chart.js - Gráficos - Rafael Tomaz | React Typescript - Luan e Murillo
-- 08/06 - Skills para React - Robert e Hyan | Material UI (Componentes de UI) - Letícia Pacheco, Felipe Cursino e Mauricio | React Slick (Sliders) - Matheus 
+- 08/06 - Skills para React - Robert e Hyan | Material UI (Componentes de UI) - Letícia Pacheco, Felipe Cursino e Mauricio | React Slick (Sliders) - Matheus | Formik (Formulários) - Angelo 
 - 15/06 - StoryBook - Nicoli / Giselle / Raissa / David | React Uploady - Kevin, Ana, Thiago Carvalho | Axios - Tiago Venancio
 - 22/06 - Mantine (Componentes de UI) - Arthur e Vinícius | React Hook Form (Formulários) - Eduarda
